@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Avaliacao" representedClassName=".Avaliacao" syncable="YES">
+        <attribute name="amoroso" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dataDoDia" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="feliz" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="foto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="irritado" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="triste" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="relationshipAvaliacaoCrianca" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Crianca" inverseName="relationshipCriancaAvaliacao" inverseEntity="Crianca" syncable="YES"/>
+    </entity>
+    <entity name="Crianca" representedClassName=".Crianca" syncable="YES">
+        <attribute name="aniversario" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="foto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="relationshipCriancaAvaliacao" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Avaliacao" inverseName="relationshipAvaliacaoCrianca" inverseEntity="Avaliacao" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Avaliacao" positionX="-408.77734375" positionY="-104.5546875" width="128" height="180"/>
+        <element name="Crianca" positionX="-63" positionY="-18" width="128" height="118"/>
+    </elements>
+</model>
