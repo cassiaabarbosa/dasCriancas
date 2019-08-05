@@ -97,20 +97,15 @@ class evaluationScreen: UICollectionViewController, UICollectionViewDelegateFlow
     @objc func go (sender: exButton) {
         let alert = UIAlertController(title: "Apagar registro", message: "Você deseja mesmo apagar esse registro?", preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Apagar", style: .destructive, handler: { (action) in
-            
-            
-            
-            self.context?.delete((sender.celula as? EvaluationCell)!.avaliacao!)
+        alert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.default, handler: { _ in }))
+        
+        alert.addAction(UIAlertAction(title: "Apagar", style: .destructive, handler: { (action) in self.context?.delete((sender.celula as? EvaluationCell)!.avaliacao!)
             self.avaliacoesCollection.remove(at: (sender.celula as! EvaluationCell).avaliacaoIndex!)
             self.collectionView.reloadData()
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
             appDelegate.saveContext()
             
         }))
-        
-        
-        alert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.default, handler: { _ in }))
         
 //        alert.popoverPresentationController?.sourceView = self.view
 //        alert.popoverPresentationController?.sourceRect = (sender as AnyObject).frame

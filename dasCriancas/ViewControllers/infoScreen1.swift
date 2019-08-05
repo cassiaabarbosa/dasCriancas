@@ -25,7 +25,7 @@ class infoScreen1: UIViewController, UIScrollViewDelegate {
     
     
     
-    var paisScreenImages: [UIImage] = [UIImage(named: "pS1")!, UIImage(named: "pS2")!, UIImage(named: "pS3")!, UIImage(named: "pS4")!, UIImage(named: "pS5")!, UIImage(named: "pS6")!, UIImage(named: "pS7")! ]
+var paisScreenImages: [UIImage] = [UIImage(named: "pS1")!, UIImage(named: "pS2")!, UIImage(named: "pS3")!, UIImage(named: "pS4")!, UIImage(named: "pS5")!, UIImage(named: "pS6")!, UIImage(named: "pS7")!, UIImage(named: "pS8")!, UIImage(named: "pS9")!, UIImage(named: "pS10")!, UIImage(named: "pS11")!]
     
     
     var storyScreenImages: [UIImage] = [UIImage(named: "sS1")!, UIImage(named: "sS2")!, UIImage(named: "sS3")!, UIImage(named: "sS4")!, UIImage(named: "sS5")!]
@@ -45,40 +45,40 @@ class infoScreen1: UIViewController, UIScrollViewDelegate {
         view.bringSubviewToFront(pageControl)
         
         
-        slides[0].imagem.frame.size.width = self.view.frame.width * 0.6
-        slides[0].imagem.frame.size.height = self.view.frame.height * 0.6
+        slides[0].imagem.frame.size.width = self.view.frame.width * 0.7
+        slides[0].imagem.frame.size.height = self.view.frame.height * 0.57
         slides[0].imagem.center.x = self.view.center.x
-        slides[0].imagem.center.y = self.view.center.y * 1.34
+        slides[0].imagem.center.y = self.view.center.y * 1.365
         
         
         slides[1].imagem.frame.size.width = self.view.frame.width * 0.7
-        slides[1].imagem.frame.size.height = self.view.frame.height * 0.6
+        slides[1].imagem.frame.size.height = self.view.frame.height * 0.57
         slides[1].imagem.center.x = self.view.center.x
-        slides[1].imagem.center.y = self.view.center.y * 1.34
+        slides[1].imagem.center.y = self.view.center.y * 1.365
         
         
         slides[2].okButton.imageView?.image = slides[2].okButton.imageView?.image?.circleMask
         
         slides[2].imagem.frame.size.width = self.view.frame.width * 0.7
-        slides[2].imagem.frame.size.height = self.view.frame.height * 0.55
+        slides[2].imagem.frame.size.height = self.view.frame.height * 0.57
         slides[2].imagem.center.x = self.view.center.x
-        slides[2].imagem.center.y = self.view.center.y * 1.35
+        slides[2].imagem.center.y = self.view.center.y * 1.365
         
     }
 
     
     func createSlides() -> [slide ] {
         let slide1:slide = Bundle.main.loadNibNamed("slide", owner: self, options: nil)?.first as! slide
-        slide1.descricao.text = "Pelo menos uma vez na semana, faça as sessões de relaxamento e crie uma história com sua criança. Em seguida, avalie como ela estava no dia. Os registros permanecerão a fim de você poder avaliar como sua criança está lidando com as emoções."
+        slide1.descricao.text = "Cadastre sua criança no app. Pelo menos uma vez na semana, faça as sessões de relaxamento e crie uma história com sua criança. Em seguida, avalie como ela estava no dia. Os registros permanecerão a fim de você poder avaliar como sua criança está lidando com as emoções."
         slide1.descricao.adjustsFontForContentSizeCategory = true
         slide1.okButton.isHidden = true
         
         slide1.imagem.animationImages = paisScreenImages
-        slide1.imagem.animationDuration = 5.25
+        slide1.imagem.animationDuration = 11
         slide1.imagem.startAnimating()
         
         slide1.imagem.layer.cornerRadius = 10
-        slide1.imagem.layer.borderWidth = 2.5
+        slide1.imagem.layer.borderWidth = 2
         slide1.imagem.layer.borderColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
 
         slide1.backgroundColor = #colorLiteral(red: 0.7529411765, green: 0.8078431373, blue: 0.8352941176, alpha: 1)
@@ -92,14 +92,14 @@ class infoScreen1: UIViewController, UIScrollViewDelegate {
         slide2.descricao.adjustsFontForContentSizeCategory = true
         
         slide2.imagem.animationImages = storyScreenImages
-        slide2.imagem.animationDuration = 3.75
+        slide2.imagem.animationDuration = 5
         slide2.imagem.startAnimating()
         
         slide2.imagem.layer.cornerRadius = 10
-        slide2.imagem.layer.borderWidth = 2.5
+        slide2.imagem.layer.borderWidth = 2
         slide2.imagem.layer.borderColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
       
-        slide2.backgroundColor = #colorLiteral(red: 0.8078431373, green: 0.9607843137, blue: 0.9960784314, alpha: 1)
+        slide2.backgroundColor = #colorLiteral(red: 0.7351616025, green: 0.9265401959, blue: 0.9626358151, alpha: 1)
         
         slide2.okButton.isHidden = true
         
@@ -112,15 +112,15 @@ class infoScreen1: UIViewController, UIScrollViewDelegate {
         slide3.descricao.adjustsFontForContentSizeCategory = true
         
         slide3.imagem.animationImages = relaxScreenImages
-        slide3.imagem.animationDuration = 3.75
+        slide3.imagem.animationDuration = 5
         slide3.imagem.startAnimating()
         
         slide3.isUserInteractionEnabled = true
         
-        slide3.backgroundColor = #colorLiteral(red: 0.8509803922, green: 0.9450980392, blue: 0.9882352941, alpha: 1)
+        slide3.backgroundColor = #colorLiteral(red: 0.7987042069, green: 0.912568748, blue: 0.9627984166, alpha: 1)
         
         slide3.imagem.layer.cornerRadius = 10
-        slide3.imagem.layer.borderWidth = 2.5
+        slide3.imagem.layer.borderWidth = 2
         slide3.imagem.layer.borderColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
        
         slide3.okButton.addTarget(self, action: #selector(go(_:)), for: .touchUpInside)

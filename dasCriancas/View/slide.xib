@@ -20,7 +20,7 @@
                     <rect key="frame" x="47" y="290.33333333333326" width="281" height="446.66666666666674"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="14" minimumScaleFactor="0.75" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bdx-DU-GTh">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="14" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="Bdx-DU-GTh">
                     <rect key="frame" x="51" y="86" width="922" height="410"/>
                     <fontDescription key="fontDescription" name="Charter-Black" family="Charter" pointSize="16"/>
                     <nil key="textColor"/>
@@ -28,7 +28,7 @@
                     <size key="shadowOffset" width="0.0" height="0.0"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Way-az-ELT">
-                    <rect key="frame" x="958.5" y="58.5" width="54.5" height="54.5"/>
+                    <rect key="frame" x="945.5" y="75.5" width="54.5" height="54.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Way-az-ELT" secondAttribute="height" multiplier="8:8" id="8Qe-1G-LgX"/>
                     </constraints>
@@ -41,9 +41,9 @@
                 <constraint firstItem="Way-az-ELT" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.04" id="Hja-aq-6br"/>
                 <constraint firstItem="Bdx-DU-GTh" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.3" id="Ic5-hI-bKs"/>
                 <constraint firstItem="Bdx-DU-GTh" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.9" id="VFG-sg-7ZJ"/>
-                <constraint firstItem="Way-az-ELT" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" multiplier="0.125" id="brn-QF-7q1"/>
+                <constraint firstItem="Way-az-ELT" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" multiplier="0.15" id="brn-QF-7q1"/>
                 <constraint firstItem="Bdx-DU-GTh" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" multiplier="0.425" id="fKR-SI-Wzt"/>
-                <constraint firstItem="Way-az-ELT" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" multiplier="1.925" id="znA-yx-VV9"/>
+                <constraint firstItem="Way-az-ELT" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" multiplier="1.9" id="znA-yx-VV9"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>

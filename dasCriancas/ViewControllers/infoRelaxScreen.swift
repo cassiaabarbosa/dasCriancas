@@ -32,11 +32,11 @@ class infoRelaxScreen: UIViewController {
 //        descricao.adjustsFontForContentSizeCategory = true
         
         imagem.animationImages = relaxScreenImages
-        imagem.animationDuration = 3.75
+        imagem.animationDuration = 5
         imagem.startAnimating()
         
         imagem.layer.cornerRadius = 10
-        imagem.layer.borderWidth = 2.4
+        imagem.layer.borderWidth = 2
         imagem.layer.borderColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
         
     }

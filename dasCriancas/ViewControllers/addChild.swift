@@ -94,7 +94,7 @@ class addChild: UIViewController,UIImagePickerControllerDelegate, UINavigationCo
         
         guard let imageName = temp as? String else { fatalError("Invalid Message Name!") }
         
-        guard let image = childPhoto.image as? UIImage else { fatalError("Invalid Image") }
+        guard let image = childPhoto.image else { fatalError("Invalid Image") }
         
         saveImage(imageName: imageName, image: image)
         child.foto = imageName
@@ -132,8 +132,14 @@ class addChild: UIViewController,UIImagePickerControllerDelegate, UINavigationCo
 
     
     @IBAction func cadastrarButtonClicked(_ sender: Any) {
-        saveChild()
-        navigationController?.popViewController(animated: true)
+        if(childName.text == "") {
+            childName.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 0.5)
+        }
+        else {
+            saveChild()
+            navigationController?.popViewController(animated: true)
+        }
+        
     }
     
     

@@ -114,11 +114,9 @@ class paisScreen: UICollectionViewController, UICollectionViewDelegateFlowLayout
     @objc func go (sender: exButton) {
         let alert = UIAlertController(title: "Descadastrar criança", message: "Você deseja mesmo descadastrar essa criança?", preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Descadastarr", style: .destructive, handler: { (action) in
-
-            
-            
-            self.context?.delete((sender.celula as? ChildCell)!.crianca!)
+        alert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.default, handler: { _ in }))
+        
+        alert.addAction(UIAlertAction(title: "Descadastrar", style: .destructive, handler: { (action) in self.context?.delete((sender.celula as? ChildCell)!.crianca!)
             self.criancasCollection.remove(at: (sender.celula as! ChildCell).criancaIndex!)
             self.collectionView.reloadData()
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -127,7 +125,7 @@ class paisScreen: UICollectionViewController, UICollectionViewDelegateFlowLayout
         }))
         
         
-        alert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.default, handler: { _ in }))
+        
         
 //        alert.popoverPresentationController?.sourceView = self.view
 //        alert.popoverPresentationController?.sourceRect = (sender as AnyObject).frame
