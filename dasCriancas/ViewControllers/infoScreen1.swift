@@ -25,7 +25,7 @@ class infoScreen1: UIViewController, UIScrollViewDelegate {
     
     
     
-var paisScreenImages: [UIImage] = [UIImage(named: "pS1")!, UIImage(named: "pS2")!, UIImage(named: "pS3")!, UIImage(named: "pS4")!, UIImage(named: "pS5")!, UIImage(named: "pS6")!, UIImage(named: "pS7")!, UIImage(named: "pS8")!, UIImage(named: "pS9")!, UIImage(named: "pS10")!, UIImage(named: "pS11")!]
+    var paisScreenImages: [UIImage] = [UIImage(named: "pS1")!, UIImage(named: "pS2")!, UIImage(named: "pS3")!, UIImage(named: "pS4")!, UIImage(named: "pS5")!, UIImage(named: "pS6")!, UIImage(named: "pS7")!, UIImage(named: "pS8")!, UIImage(named: "pS9")!, UIImage(named: "pS10")!, UIImage(named: "pS11")!]
     
     
     var storyScreenImages: [UIImage] = [UIImage(named: "sS1")!, UIImage(named: "sS2")!, UIImage(named: "sS3")!, UIImage(named: "sS4")!, UIImage(named: "sS5")!]
@@ -43,7 +43,6 @@ var paisScreenImages: [UIImage] = [UIImage(named: "pS1")!, UIImage(named: "pS2")
         pageControl.numberOfPages = slides.count
         pageControl.currentPage = 0
         view.bringSubviewToFront(pageControl)
-        
         
         slides[0].imagem.frame.size.width = self.view.frame.width * 0.7
         slides[0].imagem.frame.size.height = self.view.frame.height * 0.57

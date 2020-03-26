@@ -90,9 +90,7 @@ class addChild: UIViewController,UIImagePickerControllerDelegate, UINavigationCo
         
         child.aniversario = childBirthday.date as NSDate
         
-        let temp:String = UUID().uuidString
-        
-        guard let imageName = temp as? String else { fatalError("Invalid Message Name!") }
+        let imageName = UUID().uuidString
         
         guard let image = childPhoto.image else { fatalError("Invalid Image") }
         
@@ -156,9 +154,11 @@ class addChild: UIViewController,UIImagePickerControllerDelegate, UINavigationCo
         
     }
     
+    
     @objc func dismissAlertController(){
         self.dismiss(animated: true, completion: nil)
     }
+    
     
     @IBAction func addPhotoButtonClicked(_ sender: Any) {
         let alert = UIAlertController(title: "Adicionar foto da criança", message: nil, preferredStyle: .alert)
@@ -187,8 +187,6 @@ class addChild: UIViewController,UIImagePickerControllerDelegate, UINavigationCo
             }
             
         }))
-//        alert.popoverPresentationController?.sourceView = self.view
-//        alert.popoverPresentationController?.sourceRect = (sender as AnyObject).frame
         self.present(alert, animated: true) {
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.dismissAlertController))
             alert.view.superview?.subviews[0].addGestureRecognizer(tapGesture)

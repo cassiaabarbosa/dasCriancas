@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2I8-qE-uSx">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2I8-qE-uSx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -98,8 +96,8 @@
                     <tabBarItem key="tabBarItem" title="Relax" image="relaxIcon" id="N4o-D7-W3B"/>
                     <navigationItem key="navigationItem" id="BWJ-HN-Kmg">
                         <barButtonItem key="leftBarButtonItem" id="1Nm-KX-f4a">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" lineBreakMode="middleTruncation" id="Di6-K3-MHx">
-                                <rect key="frame" x="20" y="11" width="22" height="22"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" lineBreakMode="middleTruncation" id="Di6-K3-MHx">
+                                <rect key="frame" x="20" y="10" width="25" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="065-NI-CNf" kind="show" id="H6v-uu-LTe"/>
@@ -718,8 +716,7 @@
                                 <rect key="frame" x="20.5" y="525" width="373" height="123"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite o nome da criança" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3e-Jb-NE3">
-                                <rect key="frame" x="30" y="536.5" width="354" height="30"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="30" y="534.5" width="354" height="34"/>
                                 <fontDescription key="fontDescription" name="Charter-Black" family="Charter" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
@@ -729,14 +726,11 @@
                                     <action selector="addPhotoButtonClicked:" destination="23T-YU-LYC" eventType="touchUpInside" id="uqx-ZQ-Vmz"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="IZz-Mh-c8r">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="IZz-Mh-c8r">
                                 <rect key="frame" x="67" y="599.5" width="280" height="185"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="280" id="mWT-kK-4be"/>
                                 </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="586373176.16452003">
-                                    <!--2019-08-01 17:26:16 +0000-->
-                                </date>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-347122800">
                                     <!--1990-01-01 09:00:00 +0000-->
                                 </date>
@@ -746,7 +740,7 @@
                                 <locale key="locale" localeIdentifier="pt_BR"/>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data de nascimento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sB-8Z-GQ1">
-                                <rect key="frame" x="30" y="586" width="354" height="30"/>
+                                <rect key="frame" x="30" y="584" width="354" height="34"/>
                                 <fontDescription key="fontDescription" name="Charter-Black" family="Charter" pointSize="14"/>
                                 <color key="textColor" red="0.78051459789276123" green="0.78008800745010376" blue="0.80000311136245728" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>

@@ -228,11 +228,14 @@ let numero: [String] = ["0.0", "0.5", "1.0", "1.5", "2.0", "2.5", "3.0", "3.5", 
         
         evaluation.dataDoDia = Date() as NSDate
         
-        let temp:String = UUID().uuidString
-        guard let imageName = temp as? String else { fatalError("Invalid Message Name!") }
-        guard let image = addPhoto.image as? UIImage else { fatalError("Invalid Image") }
+        let imageName = UUID().uuidString
+        
+        guard let image = addPhoto.image else { fatalError("Invalid Image") }
+        
         saveImage(imageName: imageName, image: image)
         evaluation.foto = imageName
+        
+//        fazer a relação de 1 -> muitos e muitos -> 1
         currentCrianca.addToRelationshipCriancaAvaliacao(evaluation)
         evaluation.relationshipAvaliacaoCrianca = currentCrianca
         
